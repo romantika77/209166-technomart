@@ -1882,7 +1882,7 @@
       background-position: -10px -312px;
     }
 
-     input[type="checkbox"]:checked: + label::after {
+     input[type="checkbox"]:checked + label::after {
        background-position: -10px -269px;
     }
 
