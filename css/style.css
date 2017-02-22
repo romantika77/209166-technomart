@@ -1935,9 +1935,7 @@
       margin-bottom: 0;
     }
 
-    input[type="checkbox"] + label::before,
-    input[type="checkbox"] + label:hover::before,
-    input[type="checkbox"]:disabled + label::before {
+    input[type="checkbox"] + label::before {     
       content: "";
       position: absolute;
       top: -2px;
@@ -1947,19 +1945,58 @@
       height: 23px;
       border-radius: 5px;
       background: #ffffff;
-    }
-
-    input[type="checkbox"] + label::before {
-      border: 2px solid #c1c1c1;
+      border: 2px solid #b5b5b5;
+      opacity: 0.8;
     }
 
     input[type="checkbox"] + label:hover::before {
       border: 2px solid #b5b5b5;
+      opacity: 1;
     }
 
     input[type="checkbox"]:disabled + label::before {
-      border: 2px solid #e9e9e9;
+      border: 2px solid #b5b5b5;
+      opacity: 0.3;
     }
+
+    input[type="checkbox"]:checked + label::after {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 27px;
+      height: 23px;
+      background: #ffffff;
+      background-image: url("../img/sprite.png");
+      background-repeat: no-repeat;
+      background-position: -10px -312px;
+      opacity: 0.8;
+    }
+
+    input[type="checkbox"]:checked:disabled + label::after {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 27px;
+      height: 23px;
+      background: #ffffff;
+      background-image: url("../img/sprite.png");
+      background-repeat: no-repeat;
+      background-position: -10px -312px;
+     opacity: 0.4;
+    
+    }
+
+    
+    input[type="checkbox"]:checked + label:hover::after {
+    	background: #ffffff;
+      background-image: url("../img/sprite.png");
+      background-repeat: no-repeat;
+      background-position: -10px -312px;
+      opacity: 1;
+    }
+
 
     input[type="radio"] + label::before,
     input[type="radio"] + label:hover::before,
@@ -1987,30 +2024,7 @@
       border: 3px solid #e9e9e9;
     }
 
-    input[type="checkbox"]:checked + label::after {
-      content: "";
-      position: absolute;
-      top: -2px;
-      left: 0;
-      width: 27px;
-      height: 23px;
-      background-image: url("../img/sprite.png");
-      background-repeat: no-repeat;
-      background-position: -10px -226px;
-    }
-
-    input[type="checkbox"]:checked + label:hover::after {
-      content: "";
-      position: absolute;
-      top: -2px;
-      left: 0;
-      width: 27px;
-      height: 23px;
-      background-image: url("../img/sprite.png");
-      background-repeat: no-repeat;
-      background-position: -10px -312px;
-    }
-
+    
     input[type="radio"]:checked + label::after,
     input[type="radio"]:checked + label:hover::after {
       content: "";
